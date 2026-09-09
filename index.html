@@ -1,1013 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Nexevia Global Services is a remote startup offering sales and business development opportunities for students, freshers and graduates.">
-<meta name="keywords" content="Nexevia Global Services, sales internship, remote jobs, sales intern, sales associate, business development, fresher jobs, graduate jobs, student internships">
-<meta name="author" content="Nexevia Global Services">
-
-<meta property="og:title" content="Nexevia Global Services | Remote Sales & Business Opportunities">
-<meta property="og:description" content="Join Nexevia Global Services and build practical experience in sales, business development and customer engagement.">
-
-<title>Nexevia Global Services | Remote Sales & Business Opportunities</title>
-
-<style>
-:root{
---navy:#0a1735;
---blue:#2563eb;
---cyan:#06b6d4;
---ink:#172033;
---muted:#667085;
---light:#f5f8ff;
---white:#fff;
---line:#e5eaf2
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0
-}
-
-html{
-scroll-behavior:smooth
-}
-
-body{
-font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-color:var(--ink);
-line-height:1.6
-}
-
-a{
-text-decoration:none;
-color:inherit
-}
-
-.container{
-width:min(1120px,92%);
-margin:auto
-}
-
-nav{
-position:sticky;
-top:0;
-z-index:30;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--line)
-}
-
-.navin{
-height:72px;
-display:flex;
-align-items:center;
-justify-content:space-between
-}
-
-.logo{
-font-size:21px;
-font-weight:850;
-color:var(--navy);
-letter-spacing:-.6px
-}
-
-.logo span{
-color:var(--blue)
-}
-
-.links{
-display:flex;
-gap:26px;
-align-items:center;
-font-size:14px;
-font-weight:700
-}
-
-.links a:hover{
-color:var(--blue)
-}
-
-.btn{
-display:inline-block;
-background:var(--blue);
-color:#fff;
-padding:12px 19px;
-border-radius:10px;
-font-weight:750;
-font-size:14px;
-box-shadow:0 8px 24px rgba(37,99,235,.2);
-transition:.2s
-}
-
-.btn:hover{
-background:#1d4ed8;
-transform:translateY(-1px)
-}
-
-.btn.light{
-background:#fff;
-color:var(--navy);
-box-shadow:none;
-border:1px solid var(--line)
-}
-
-.hero{
-background:
-radial-gradient(circle at 85% 15%,rgba(6,182,212,.18),transparent 28%),
-linear-gradient(135deg,#f7faff,#edf4ff);
-padding:92px 0 85px
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.12fr .88fr;
-gap:55px;
-align-items:center
-}
-
-.badge{
-display:inline-flex;
-background:#e4efff;
-color:#1d4ed8;
-border-radius:999px;
-padding:7px 13px;
-font-size:12px;
-font-weight:850;
-text-transform:uppercase;
-letter-spacing:.8px
-}
-
-h1{
-font-size:clamp(42px,6vw,67px);
-line-height:1.04;
-letter-spacing:-2.6px;
-color:var(--navy);
-margin:18px 0
-}
-
-h1 span{
-color:var(--blue)
-}
-
-.hero p{
-font-size:18px;
-color:var(--muted);
-max-width:650px
-}
-
-.actions{
-display:flex;
-gap:13px;
-margin-top:28px;
-flex-wrap:wrap
-}
-
-.visual{
-min-height:390px;
-position:relative
-}
-
-.orb{
-position:absolute;
-width:285px;
-height:285px;
-border-radius:50%;
-right:25px;
-top:22px;
-background:linear-gradient(135deg,var(--blue),var(--cyan));
-opacity:.9
-}
-
-.card{
-position:absolute;
-background:rgba(255,255,255,.94);
-border:1px solid rgba(255,255,255,.9);
-box-shadow:0 25px 70px rgba(15,23,42,.15);
-border-radius:20px;
-padding:25px
-}
-
-.card.main{
-width:315px;
-right:0;
-top:60px
-}
-
-.card.small{
-width:210px;
-left:0;
-bottom:18px
-}
-
-.card h3{
-color:var(--navy);
-margin:8px 0 5px
-}
-
-.card p{
-font-size:13px;
-color:var(--muted)
-}
-
-.metric{
-font-size:35px;
-font-weight:850;
-color:var(--blue);
-margin-top:12px
-}
-
-section{
-padding:85px 0
-}
-
-.head{
-text-align:center;
-max-width:720px;
-margin:0 auto 44px
-}
-
-.head h2{
-font-size:38px;
-line-height:1.15;
-letter-spacing:-1.2px;
-color:var(--navy)
-}
-
-.head p{
-color:var(--muted);
-margin-top:10px
-}
-
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:21px
-}
-
-.service{
-padding:28px;
-border:1px solid var(--line);
-border-radius:18px;
-background:#fff;
-transition:.2s
-}
-
-.service:hover{
-transform:translateY(-5px);
-box-shadow:0 16px 45px rgba(15,23,42,.08)
-}
-
-.icon{
-width:47px;
-height:47px;
-border-radius:13px;
-background:#eaf1ff;
-color:var(--blue);
-display:grid;
-place-items:center;
-font-size:21px;
-margin-bottom:16px
-}
-
-.service h3{
-font-size:18px;
-color:var(--navy);
-margin-bottom:7px
-}
-
-.service p{
-font-size:14px;
-color:var(--muted)
-}
-
-.jobs{
-background:var(--light)
-}
-
-.job{
-background:#fff;
-border:1px solid var(--line);
-border-radius:22px;
-padding:35px;
-display:grid;
-grid-template-columns:1fr auto;
-gap:30px;
-box-shadow:0 15px 45px rgba(15,23,42,.05);
-margin-bottom:24px
-}
-
-.job:last-child{
-margin-bottom:0
-}
-
-.job h3{
-font-size:25px;
-color:var(--navy);
-margin:8px 0
-}
-
-.job .company{
-font-weight:800;
-color:var(--blue)
-}
-
-.job p{
-color:var(--muted);
-font-size:15px
-}
-
-.tags{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-margin:18px 0
-}
-
-.tag{
-background:#eef4ff;
-color:#1d4ed8;
-border-radius:999px;
-padding:6px 10px;
-font-size:12px;
-font-weight:750
-}
-
-.job-side{
-min-width:210px;
-background:#f7faff;
-border-radius:17px;
-padding:22px;
-height:max-content
-}
-
-.job-side div{
-margin-bottom:12px;
-font-size:13px;
-color:var(--muted)
-}
-
-.job-side strong{
-display:block;
-color:var(--navy);
-font-size:15px
-}
-
-.about{
-background:var(--navy);
-color:#fff
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:65px;
-align-items:center
-}
-
-.about h2{
-font-size:40px;
-line-height:1.15;
-margin-bottom:17px
-}
-
-.about p{
-color:#cbd5e1
-}
-
-.ticks{
-list-style:none;
-display:grid;
-gap:10px;
-margin-top:23px
-}
-
-.ticks li:before{
-content:"✓";
-color:#67e8f9;
-font-weight:900;
-margin-right:10px
-}
-
-.cta{
-padding:70px 0
-}
-
-.cta-box{
-background:linear-gradient(120deg,#123b91,#0b1735);
-border-radius:24px;
-padding:52px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:30px;
-color:#fff
-}
-
-.cta-box h2{
-font-size:35px;
-line-height:1.15;
-margin-bottom:9px
-}
-
-.cta-box p{
-color:#cbd5e1;
-max-width:650px
-}
-
-footer{
-background:#071126;
-color:#aab4c7;
-padding:27px 0
-}
-
-.foot{
-display:flex;
-justify-content:space-between;
-gap:20px;
-align-items:center;
-font-size:13px
-}
-
-@media(max-width:800px){
-
-.links{
-display:none
-}
-
-.hero{
-padding:70px 0
-}
-
-.hero-grid,
-.about-grid{
-grid-template-columns:1fr
-}
-
-.visual{
-min-height:330px
-}
-
-.grid3{
-grid-template-columns:1fr
-}
-
-.job{
-grid-template-columns:1fr
-}
-
-.job-side{
-min-width:0
-}
-
-.cta-box{
-flex-direction:column;
-align-items:flex-start
-}
-
-.head h2,
-.about h2{
-font-size:32px
-}
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexevia Global Services — Outbound Sales, B2B Lead Generation & Customer Acquisition.">
+  <title>Nexevia Global Services | Sales & Business Development Solutions</title>
+  <style>
+    :root{
+      --navy:#0b1736; --blue:#2563eb; --cyan:#06b6d4; --ink:#172033;
+      --muted:#667085; --light:#f6f8fc; --white:#fff; --line:#e6eaf2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+    .logo span{color:var(--blue)}
+    .links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}
+    .links a:hover{color:var(--blue)}
+    .btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:14px;box-shadow:0 8px 22px rgba(37,99,235,.18);cursor:pointer}
+    .btn:hover{background:#1d4ed8;transform:translateY(-1px)}
+    .hero{background:radial-gradient(circle at 85% 20%,rgba(6,182,212,.2),transparent 28%),linear-gradient(135deg,#f7faff 0%,#eef4ff 100%);padding:100px 0 90px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e6efff;color:#1d4ed8;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+    h1{font-size:clamp(40px,5.5vw,62px);line-height:1.1;letter-spacing:-2px;color:var(--navy);margin:18px 0}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:18px;color:var(--muted);max-width:620px}
+    .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+    .btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+    .visual{min-height:390px;position:relative}
+    .orb{position:absolute;width:290px;height:290px;border-radius:50%;right:35px;top:25px;background:linear-gradient(135deg,var(--blue),var(--cyan));filter:blur(.2px);opacity:.92}
+    .card{position:absolute;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.8);box-shadow:0 25px 70px rgba(15,23,42,.15);border-radius:20px;padding:25px}
+    .card.main{width:320px;right:0;top:50px}
+    .card.small{width:220px;left:15px;bottom:15px}
+    .card h3{color:var(--navy);margin-bottom:7px}
+    .card p{font-size:13px;color:var(--muted)}
+    .metric{font-size:34px;font-weight:800;color:var(--blue);margin:8px 0}
+    section{padding:88px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .section-head h2{font-size:38px;letter-spacing:-1.2px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin-top:10px;font-size:16px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .service{padding:32px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:.2s}
+    .service:hover{transform:translateY(-5px);box-shadow:0 16px 45px rgba(15,23,42,.08)}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+    .service h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+    .service p{font-size:14px;color:var(--muted)}
+    .job-card{display:flex;flex-direction:column;justify-content:space-between}
+    .job-badge{display:inline-block;width:fit-content;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;background:#eaf1ff;color:var(--blue);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+    .job-meta{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:12px}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;align-items:center}
+    .about-box{background:var(--navy);border-radius:24px;padding:42px;color:#fff;min-height:360px;display:flex;flex-direction:column;justify-content:center}
+    .about-box .quote{font-size:24px;line-height:1.35;font-weight:700}
+    .about-copy h2{font-size:38px;line-height:1.2;color:var(--navy);margin-bottom:18px}
+    .about-copy p{color:var(--muted);margin-bottom:14px}
+    .ticks{list-style:none;margin-top:20px;display:grid;gap:10px}
+    .ticks li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:10px}
+    .cta{padding:80px 0}
+    .cta-box{background:linear-gradient(120deg,var(--navy),#173c8f);border-radius:25px;padding:55px;color:#fff}
+    .cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+    .cta-box h2{font-size:36px;line-height:1.15;margin-bottom:12px}
+    .cta-box p{color:#cbd5e1}
+    .contact-details{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:24px;display:grid;gap:14px;font-size:14px}
+    .contact-details strong{color:#fff;display:block;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+    .contact-details span, .contact-details a{color:#cbd5e1}
+    .contact-details a:hover{color:#fff;text-decoration:underline}
+    footer{background:#071126;color:#aab4c7;padding:32px 0}
+    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13px}
+    .social{display:flex;gap:18px}
+    @media(max-width:850px){
+      .links{display:none}
+      .hero{padding:75px 0}
+      .hero-grid,.about-grid,.cta-grid{grid-template-columns:1fr}
+      .visual{min-height:330px}
+      .grid3,.grid2{grid-template-columns:1fr}
+      .section-head h2,.about-copy h2,.cta-box h2{font-size:30px}
+      .foot{flex-direction:column;text-align:center}
+    }
+  </style>
 </head>
-
 <body>
-
-<nav>
-<div class="container navin">
-
-<a class="logo" href="#">
-Nexevia <span>Global Services</span>
-</a>
-
-<div class="links">
-<a href="#about">About</a>
-<a href="#services">What We Do</a>
-<a href="#careers">Careers</a>
-<a class="btn" href="#contact">Join Us</a>
-</div>
-
-</div>
-</nav>
-
-
-<header class="hero">
-
-<div class="container hero-grid">
-
-<div>
-
-<div class="badge">
-Remote startup • India
-</div>
-
-<h1>
-Building businesses. <span>Building careers.</span>
-</h1>
-
-<p>
-Nexevia Global Services is a growing startup focused on sales,
-business development and customer engagement. We create opportunities
-for motivated people to gain real-world experience while contributing
-to business growth.
-</p>
-
-<div class="actions">
-<a class="btn" href="#careers">View open positions</a>
-<a class="btn light" href="#services">Discover Nexevia</a>
-</div>
-
-</div>
-
-
-<div class="visual" aria-hidden="true">
-
-<div class="orb"></div>
-
-<div class="card main">
-
-<div class="badge">
-Open position
-</div>
-
-<div class="metric">REMOTE</div>
-
-<h3>Sales Intern</h3>
-
-<p>
-Remote • 7 PM – 4 AM IST<br>
-Students & freshers welcome.
-</p>
-
-</div>
-
-
-<div class="card small">
-
-<h3>Learn. Connect. Grow.</h3>
-
-<p>
-Hands-on exposure to lead generation,
-prospecting and sales.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-
-<section id="about">
-
-<div class="container">
-
-<div class="head">
-
-<h2>Who we are</h2>
-
-<p>
-Nexevia Global Services is a startup built around practical
-business development and people-focused growth.
-</p>
-
-</div>
-
-
-<div class="about-grid"
-style="background:var(--light);padding:35px;border-radius:22px">
-
-<div>
-
-<div class="badge">
-Our approach
-</div>
-
-<h2 style="color:var(--navy);margin-top:14px">
-Real work. Real learning. Real opportunities.
-</h2>
-
-</div>
-
-
-<div>
-
-<p>
-We work to identify and engage potential customers, build
-professional relationships and support the sales process through
-structured outreach and follow-up.
-</p>
-
-<ul class="ticks" style="color:var(--ink)">
-
-<li>Sales and business development focused</li>
-<li>Remote work environment</li>
-<li>Hands-on exposure for early-career talent</li>
-<li>Growth-oriented and performance-driven</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="services">
-
-<div class="container">
-
-<div class="head">
-
-<h2>What we do</h2>
-
-<p>
-Our work centers on creating and developing business opportunities
-through proactive sales and customer engagement.
-</p>
-
-</div>
-
-
-<div class="grid3">
-
-<div class="service">
-<div class="icon">⌕</div>
-<h3>Lead Generation</h3>
-<p>
-Identify, research and qualify potential customers and business prospects.
-</p>
-</div>
-
-
-<div class="service">
-<div class="icon">☎</div>
-<h3>Customer Outreach</h3>
-<p>
-Connect with prospects through outbound calls and professional communication.
-</p>
-</div>
-
-
-<div class="service">
-<div class="icon">↗</div>
-<h3>Business Development</h3>
-<p>
-Support prospecting, relationship building and opportunities throughout the sales cycle.
-</p>
-</div>
-
-
-<div class="service">
-<div class="icon">✉</div>
-<h3>Follow-ups</h3>
-<p>
-Maintain consistent communication with prospects through calls,
-email and other channels.
-</p>
-</div>
-
-
-<div class="service">
-<div class="icon">◎</div>
-<h3>Meeting Support</h3>
-<p>
-Schedule meetings and help move qualified prospects through the sales process.
-</p>
-</div>
-
-
-<div class="service">
-<div class="icon">▣</div>
-<h3>Sales Operations</h3>
-<p>
-Maintain accurate lead records, activity updates and follow-up information.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="jobs" id="careers">
-
-<div class="container">
-
-<div class="head">
-
-<h2>Join Nexevia</h2>
-
-<p>
-We're looking for motivated students, freshers and graduates
-who want to build practical sales and business development skills.
-</p>
-
-</div>
-
-
-<!-- SALES INTERN -->
-
-<div class="job">
-
-<div>
-
-<div class="company">
-NEXEVIA GLOBAL SERVICES
-</div>
-
-<h3>Sales Intern</h3>
-
-<p>
-As a Sales Intern, you will work closely with our sales and
-business development team and gain hands-on experience in lead
-generation, customer communication, prospecting and the sales process.
-</p>
-
-
-<div class="tags">
-
-<span class="tag">Remote</span>
-<span class="tag">Students welcome</span>
-<span class="tag">Freshers welcome</span>
-<span class="tag">Sales</span>
-<span class="tag">Business Development</span>
-
-</div>
-
-
-<h3 style="font-size:18px;margin-top:25px">
-What you'll do
-</h3>
-
-<p>
-Identify prospects • conduct outbound calls • generate and qualify
-leads • understand customer requirements • follow up with prospects •
-schedule meetings • maintain lead records • build professional
-relationships • work toward assigned objectives • report sales activity
-and lead progress.
-</p>
-
-
-<h3 style="font-size:18px;margin-top:25px">
-What we're looking for
-</h3>
-
-<p>
-Good verbal and written communication, confident professional
-communication, strong interpersonal skills, self-motivation, good
-follow-up and organizational skills, ability to work independently
-remotely, basic MS Office/Google Workspace knowledge and an interest
-in sales, business development or customer relations.
-</p>
-
-</div>
-
-
-<div class="job-side">
-
-<div>
-<strong>Position</strong>
-Sales Intern
-</div>
-
-<div>
-<strong>Location</strong>
-Remote
-</div>
-
-<div>
-<strong>Hours</strong>
-7 PM – 4 AM IST
-</div>
-
-<div>
-<strong>Eligibility</strong>
-Students & Freshers
-</div>
-
-<div>
-<strong>Must have</strong>
-Working laptop + strong Wi-Fi
-</div>
-
-<a class="btn"
-style="width:100%;text-align:center;margin-top:8px"
-href="mailto:nexeviaglobalservices@gmail.com?subject=Sales%20Intern">
-Apply now
-</a>
-
-</div>
-
-</div>
-
-
-<!-- SALES ASSOCIATE -->
-
-<div class="job">
-
-<div>
-
-<div class="company">
-NEXEVIA GLOBAL SERVICES
-</div>
-
-<h3>Sales Associate</h3>
-
-<p>
-As a Sales Associate, you will work closely with our sales and
-business development team and gain hands-on experience in lead
-generation, customer communication, prospecting and the sales process.
-</p>
-
-
-<div class="tags">
-
-<span class="tag">Remote</span>
-<span class="tag">Graduates welcome</span>
-<span class="tag">Sales</span>
-<span class="tag">Business Development</span>
-
-</div>
-
-
-<h3 style="font-size:18px;margin-top:25px">
-What you'll do
-</h3>
-
-<p>
-Identify prospects • conduct outbound calls • generate and qualify
-leads • understand customer requirements • follow up with prospects •
-schedule meetings • maintain lead records • build professional
-relationships • work toward assigned objectives • report sales activity
-and lead progress.
-</p>
-
-
-<h3 style="font-size:18px;margin-top:25px">
-What we're looking for
-</h3>
-
-<p>
-Good verbal and written communication, confident professional
-communication, strong interpersonal skills, self-motivation, good
-follow-up and organizational skills, ability to work independently
-remotely, basic MS Office/Google Workspace knowledge and an interest
-in sales, business development or customer relations.
-</p>
-
-</div>
-
-
-<div class="job-side">
-
-<div>
-<strong>Position</strong>
-Sales Associate
-</div>
-
-<div>
-<strong>Location</strong>
-Remote
-</div>
-
-<div>
-<strong>Hours</strong>
-7 PM – 4 AM IST
-</div>
-
-<div>
-<strong>Eligibility</strong>
-Graduates
-</div>
-
-<div>
-<strong>Must have</strong>
-Working laptop + strong Wi-Fi
-</div>
-
-<a class="btn"
-style="width:100%;text-align:center;margin-top:8px"
-href="mailto:nexeviaglobalservices@gmail.com?subject=Sales%20Associate">
-Apply now
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="about">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div>
-
-<div class="badge"
-style="background:rgba(255,255,255,.12);color:#fff">
-Why Nexevia
-</div>
-
-<h2 style="margin-top:14px">
-Start your career with practical experience.
-</h2>
-
-</div>
-
-
-<div>
-
-<p>
-Our opportunities are designed for people who want to learn by doing.
-You’ll work on real sales activities, communicate with prospects and
-understand how business development works in a professional environment.
-</p>
-
-<ul class="ticks">
-
-<li>Hands-on sales exposure</li>
-<li>Remote work experience</li>
-<li>Professional communication development</li>
-<li>Lead generation and prospecting skills</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="cta" id="contact">
-
-<div class="container">
-
-<div class="cta-box">
-
-<div>
-
-<h2>Ready to grow with Nexevia?</h2>
-
-<p>
-Interested in one of our open opportunities?
-Send us your resume and mention the position you're applying for
-in the subject line.
-</p>
-
-</div>
-
-
-<a class="btn"
-style="background:#fff;color:var(--navy);box-shadow:none"
-href="mailto:nexeviaglobalservices@gmail.com?subject=Job%20Application">
-
-nexeviaglobalservices@gmail.com
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<div class="container foot">
-
-<div>
-© 2026 Nexevia Global Services. All rights reserved.
-</div>
-
-<div>
-Remote opportunities • Sales • Business Development
-</div>
-
-</div>
-
-</footer>
-
+  <nav>
+    <div class="container navin">
+      <a class="logo" href="#">Nexevia <span>Global Services</span></a>[cite: 1]
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#model">Model</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Hire Remote Sales Team</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Sales & Business Development Solutions</div>
+        <h1>Scale your pipeline with dedicated <span>outbound sales teams.</span></h1>
+        <p>Nexevia Global Services helps North American businesses grow through outbound sales, lead generation, customer acquisition, and business development services. We combine structured sales processes with high-performing remote teams to build predictable revenue.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Schedule a Discovery Call</a>
+          <a class="btn secondary" href="#services">Explore Capabilities</a>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="orb"></div>[cite: 1]
+        <div class="card main">
+          <div class="eyebrow">Outbound Engine</div>
+          <div class="metric">100%</div>
+          <h3>Structured Pipeline Growth</h3>
+          <p>End-to-end multi-channel outreach, cold calling, and pipeline development run by dedicated remote reps.</p>
+        </div>
+        <div class="card small">
+          <h3>Canada & Global</h3>
+          <p>North American market alignment backed by efficient global talent delivery.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-bottom:12px">Core Capabilities</div>
+        <h2>What We Sell & Deliver</h2>
+        <p>Turn outbound sales into a predictable engine. We handle the heavy prospecting, outreach, and qualification so your closing team can focus on signed contracts.</p>
+      </div>
+      <div class="grid3">
+        <div class="service">
+          <div class="icon">🎯</div>
+          <h3>B2B Lead Generation</h3>
+          <p>Targeted account research, ideal customer profile (ICP) list building, email verification, and intent data mining to feed your pipeline with sales-ready accounts.</p>
+        </div>
+        <div class="service">
+          <div class="icon">📞</div>
+          <h3>Cold Calling</h3>
+          <p>High-volume, targeted outbound dialing executed by well-trained reps who navigate gatekeepers, handle objections, and generate direct customer interest.</p>
+        </div>
+        <div class="service">
+          <div class="icon">📅</div>
+          <h3>Appointment Setting</h3>
+          <p>Qualified meetings placed straight onto your account executives' calendars, complete with call notes, qualification criteria, and background context.</p>
+        </div>
+        <div class="service">
+          <div class="icon">📈</div>
+          <h3>Sales Development</h3>
+          <p>Dedicated SDR/BDR support executing disciplined multi-touch cadences across cold calling, personalized email sequences, and social outreach.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🤝</div>
+          <h3>Customer Acquisition</h3>
+          <p>Full-funnel business development campaigns designed to penetrate new target verticals, expand market share, and convert prospects into long-term clients.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🌐</div>
+          <h3>Remote Sales Teams</h3>
+          <p>Fully managed, trained offshore sales professionals integrated into your CRM and workflows, giving North American firms enterprise-grade outbound capacity at optimal cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="model">
+    <div class="container about-grid">
+      <div class="about-box">
+        <div class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff;width:max-content;margin-bottom:16px">The Global Edge</div>
+        <div class="quote">“Bridging high-caliber remote sales execution with the demanding growth targets of North American businesses.”</div>
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow" style="margin-bottom:10px">Operating Model</div>
+        <h2>Predictable pipelines, disciplined execution.</h2>
+        <p>Nexevia Global Services deploys rigorously trained remote sales and lead generation specialists to support businesses across Canada and the United States. We manage recruitment, daily training, KPI tracking, and cold outreach execution so you don't carry the operational overhead.</p>
+        <ul class="ticks">
+          <li>Dedicated SDRs trained for North American time zones and buyer personas</li>
+          <li>Custom outbound cadences tailored to your ICP and industry vertical</li>
+          <li>Strict daily dial, connect, email, and meeting qualification metrics</li>
+          <li>Seamless CRM integration (Salesforce, HubSpot, Apollo, Outreach)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="careers">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-bottom: 12px;">We're Hiring</div>
+        <h2>Join Our Team</h2>
+        <p>Nexevia is a remote startup building high-performance sales and customer acquisition teams for global clients.</p>
+      </div>
+      <div class="grid2">
+        <div class="service job-card">
+          <div>
+            <div class="job-badge">Internship</div>
+            <h3>Sales Intern</h3>
+            <p class="job-meta">Remote • Only Freshers and Students Can Apply</p>
+            <p>Support our outreach and business development pipelines, identify qualified leads, assist with CRM management, and collaborate with sales leadership on client acquisition strategies.</p>
+            <ul class="ticks" style="margin-top: 16px; font-size: 14px;">
+              <li>Conduct market research to identify prospective client accounts</li>
+              <li>Assist with lead generation, email outreach, and follow-ups</li>
+              <li>Maintain clean CRM records and monitor pipeline activity</li>
+              <li>Participate in pitch preparation and client strategy calls</li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px;">
+            <a class="btn" href="#contact">Apply Now</a>
+          </div>
+        </div>
+
+        <div class="service job-card">
+          <div>
+            <div class="job-badge">Full-time</div>
+            <h3>Sales Associate</h3>
+            <p class="job-meta">Remote • Open for Graduates</p>
+            <p>Support our outreach and business development pipelines, identify qualified leads, assist with CRM management, and collaborate with sales leadership on client acquisition strategies.</p>
+            <ul class="ticks" style="margin-top: 16px; font-size: 14px;">
+              <li>Conduct market research to identify prospective client accounts</li>
+              <li>Assist with lead generation, email outreach, and follow-ups</li>
+              <li>Maintain clean CRM records and monitor pipeline activity</li>
+              <li>Participate in pitch preparation and client strategy calls</li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px;">
+            <a class="btn" href="#contact">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-grid">
+          <div>
+            <h2>Ready to build a predictable outbound pipeline?</h2>
+            <p>Speak with our team today to discover how our dedicated remote sales representatives can accelerate your customer acquisition goals.</p>
+            <div style="margin-top: 24px;">
+              <a class="btn" style="background:#fff;color:var(--navy);box-shadow:none" href="mailto:contact@nexeviaglobal.com">Get in Touch</a>
+            </div>
+          </div>
+          <div class="contact-details">
+            <div>
+              <strong>Corporate Headquarters</strong>
+              <span>Nexevia Global Services Inc.<br>Toronto, Ontario, Canada</span>
+            </div>
+            <div>
+              <strong>Business Inquiries & Partnerships</strong>
+              <a href="mailto:contact@nexeviaglobal.com">contact@nexeviaglobal.com</a>
+            </div>
+            <div>
+              <strong>Careers & Talent Inquiries</strong>
+              <a href="mailto:careers@nexeviaglobal.com">careers@nexeviaglobal.com</a>
+            </div>
+            <div>
+              <strong>Operational Delivery</strong>
+              <span>Global Remote Delivery & Offshore Sales Center</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>© 2026 Nexevia Global Services Inc. Toronto, ON, Canada. All rights reserved.</div>
+      <div class="social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
