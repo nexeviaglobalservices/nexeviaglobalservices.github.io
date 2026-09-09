@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexevia Global Services — professional business solutions and services.">
+  <title>Nexevia Global Services | Building Better Business Solutions</title>
+  <style>
+    :root{
+      --navy:#0b1736; --blue:#2563eb; --cyan:#06b6d4; --ink:#172033;
+      --muted:#667085; --light:#f6f8fc; --white:#fff; --line:#e6eaf2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+    .logo span{color:var(--blue)}
+    .links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}
+    .links a:hover{color:var(--blue)}
+    .btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:14px;box-shadow:0 8px 22px rgba(37,99,235,.18)}
+    .btn:hover{background:#1d4ed8;transform:translateY(-1px)}
+    .hero{background:radial-gradient(circle at 85% 20%,rgba(6,182,212,.2),transparent 28%),linear-gradient(135deg,#f7faff 0%,#eef4ff 100%);padding:100px 0 90px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e6efff;color:#1d4ed8;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.05;letter-spacing:-2.5px;color:var(--navy);margin:18px 0}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:18px;color:var(--muted);max-width:610px}
+    .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+    .btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+    .visual{min-height:390px;position:relative}
+    .orb{position:absolute;width:290px;height:290px;border-radius:50%;right:35px;top:25px;background:linear-gradient(135deg,var(--blue),var(--cyan));filter:blur(.2px);opacity:.92}
+    .card{position:absolute;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.8);box-shadow:0 25px 70px rgba(15,23,42,.15);border-radius:20px;padding:25px}
+    .card.main{width:310px;right:0;top:65px}
+    .card.small{width:205px;left:15px;bottom:20px}
+    .card h3{color:var(--navy);margin-bottom:7px}
+    .card p{font-size:13px;color:var(--muted)}
+    .metric{font-size:34px;font-weight:800;color:var(--blue);margin:10px 0}
+    section{padding:88px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .section-head h2{font-size:38px;letter-spacing:-1.2px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin-top:10px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .service{padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:.2s}
+    .service:hover{transform:translateY(-5px);box-shadow:0 16px 45px rgba(15,23,42,.08)}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+    .service h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+    .service p{font-size:14px;color:var(--muted)}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+    .about-box{background:var(--navy);border-radius:24px;padding:42px;color:#fff;min-height:340px;display:flex;flex-direction:column;justify-content:end}
+    .about-box .quote{font-size:26px;line-height:1.25;font-weight:750}
+    .about-copy h2{font-size:40px;line-height:1.15;color:var(--navy);margin-bottom:18px}
+    .about-copy p{color:var(--muted);margin-bottom:14px}
+    .ticks{list-style:none;margin-top:22px;display:grid;gap:10px}
+    .ticks li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:10px}
+    .cta{padding:70px 0}
+    .cta-box{background:linear-gradient(120deg,var(--navy),#173c8f);border-radius:25px;padding:55px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .cta-box h2{font-size:36px;line-height:1.15;margin-bottom:10px}
+    .cta-box p{color:#cbd5e1;max-width:650px}
+    footer{background:#071126;color:#aab4c7;padding:28px 0}
+    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13px}
+    .social{display:flex;gap:18px}
+    @media(max-width:800px){
+      .links{display:none}.hero{padding:75px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.visual{min-height:330px}.grid3{grid-template-columns:1fr}
+      .cta-box{flex-direction:column;align-items:flex-start}.section-head h2,.about-copy h2{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container navin">
+      <a class="logo" href="#">Nexevia <span>Global Services</span></a>
+      <div class="links">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Global Business Solutions</div>
+        <h1>Smart solutions for a <span>growing business.</span></h1>
+        <p>Nexevia Global Services helps businesses move forward with dependable, practical and professional solutions tailored to their goals.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Let’s work together</a>
+          <a class="btn secondary" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="card main">
+          <div class="eyebrow">NEXEVIA</div>
+          <div class="metric">360°</div>
+          <h3>Business-focused approach</h3>
+          <p>From strategy to execution, we focus on clear outcomes, quality delivery and long-term value.</p>
+        </div>
+        <div class="card small">
+          <h3>Built to scale</h3>
+          <p>Flexible services designed around your needs.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>What we can help with</h2>
+        <p>A clean, flexible service section that you can customize with your exact Nexevia offerings.</p>
+      </div>
+      <div class="grid3">
+        <div class="service"><div class="icon">◆</div><h3>Business Services</h3><p>Professional support designed to simplify day-to-day business requirements and improve execution.</p></div>
+        <div class="service"><div class="icon">↗</div><h3>Consulting & Strategy</h3><p>Practical guidance to identify opportunities, solve challenges and build a stronger path forward.</p></div>
+        <div class="service"><div class="icon">◌</div><h3>Technology Solutions</h3><p>Technology-led solutions that help businesses become more efficient, connected and scalable.</p></div>
+        <div class="service"><div class="icon">◎</div><h3>Operations Support</h3><p>Reliable operational assistance with a focus on quality, responsiveness and measurable outcomes.</p></div>
+        <div class="service"><div class="icon">▣</div><h3>Client Solutions</h3><p>Flexible engagement models tailored to the needs of individual clients and organizations.</p></div>
+        <div class="service"><div class="icon">★</div><h3>Growth Enablement</h3><p>Helping teams turn ideas into structured actions that support sustainable business growth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-box">
+        <div class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;width:max-content">Nexevia</div>
+        <div class="quote">“Professional service. Practical thinking. Better outcomes.”</div>
+      </div>
+      <div class="about-copy">
+        <h2>Built around your business goals.</h2>
+        <p>Nexevia Global Services is positioned as a modern, client-focused business services company. This section is intentionally easy to edit once you provide the company's exact profile and offerings.</p>
+        <ul class="ticks">
+          <li>Client-first approach</li>
+          <li>Professional and transparent delivery</li>
+          <li>Flexible solutions for different business needs</li>
+          <li>Focus on long-term relationships</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Have a requirement?</h2>
+          <p>Let’s discuss how Nexevia Global Services can support your business. Replace the placeholder contact details below with your official email, phone and social links.</p>
+        </div>
+        <a class="btn" style="background:#fff;color:var(--navy);box-shadow:none" href="mailto:YOUR-EMAIL@example.com">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>© 2026 Nexevia Global Services. All rights reserved.</div>
+      <div class="social"><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Facebook</a></div>
+    </div>
+  </footer>
+</body>
+</html>
